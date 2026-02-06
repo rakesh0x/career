@@ -54,9 +54,9 @@ const glitchVariants = {
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false)
-  const [actions, setActions] = useState([])
+  const [actions, setActions] = useState<UIAction[]>([])
   const [state, setState] = useState(INITIAL_STATE)
-  const [allActions, setAllActions] = useState([])
+  const [allActions, setAllActions] = useState<UIAction[]>([])
   const [showInfo, setShowInfo] = useState(false)
 
   const handleUserInput = async (input: string) => {
