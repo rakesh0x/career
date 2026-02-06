@@ -1,6 +1,5 @@
-// Placeholder for Toast component
 
-import React from 'react';
+import * as React from 'react';
 
 export type ToastActionElement = React.ReactNode;
 export interface ToastProps {
