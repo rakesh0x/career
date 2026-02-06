@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, easeOut } from 'framer-motion'
 import { CareerInputForm } from '../components/career-input-form'
 import { DynamicComponentRenderer } from '../components/dynamic-component-renderer'
 import { TamboAIService } from '@/lib/tambo-ai-service'
@@ -39,7 +39,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.42, 0, 1, 1] },
+    transition: { duration: 0.5, ease: easeOut },
   },
 }
 
@@ -48,7 +48,7 @@ const glitchVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.4, ease: [0.42, 0, 1, 1] },
+    transition: { duration: 0.4, ease: easeOut },
   },
 }
 
@@ -342,7 +342,7 @@ export default function Home() {
                             className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600"
                             initial={{ width: 0 }}
                             animate={{ width: `${progressValue}%` }}
-                            transition={{ duration: 0.8, ease: [0.42, 0, 1, 1] }}
+                            transition={{ duration: 0.8, ease: easeOut }}
                           />
                         </div>
                       </motion.div>
